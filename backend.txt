@@ -1,0 +1,23 @@
+How a Website Works !
+search and interact with fronend --> requests to backend --> and then gives response to front
+
+data traverses via an API(application programming interface) (raasta h with defined rules and contains diff methods of communication btw frontend and backend server)
+
+API METHODS :-
+1)FETCH DATA
+2)ADD
+3)PUT
+4)DELETE
+
+CRUD === CREATE READ UPDATE DELETE 
+
+
+IMPLEMENTATION
+-> Express 
+-> Mongoose DB(MOngo DB)  comm btw server and DB 
+(frameworks and libraries)
+
+
+npm init -y
+
+http status code
