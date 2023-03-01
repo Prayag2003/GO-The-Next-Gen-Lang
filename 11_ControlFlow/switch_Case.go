@@ -21,7 +21,7 @@ func main() {
 
 	switch diceNumber {
 	case 1:
-		fmt.Println("You can move 1 step . ")
+		fmt.Println("You can move 1 step . You can start the Game !! ")
 	case 2:
 		fmt.Println("You can move 2 step . ")
 	case 3:
