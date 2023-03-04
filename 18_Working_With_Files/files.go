@@ -13,7 +13,7 @@ func main() {
 	// adding content to a file
 	content := "This is my Content and let's add to the File !!! \n"
 
-	// creating a File by using OS Library
+	// creating a File by using OS Library in the Current Directory
 	file, err := os.Create("./myFile.txt")
 
 	// panic stops the execution and reports the error
@@ -50,7 +50,7 @@ func readingFile(filename string) {
 
 	// fmt.Println("File is being Read \n", readBytes)  // gives ASCII codes as output
 
-	fmt.Println("File is being Read \n", string(readBytes))
 	// wrapping the bytes inside a string
+	fmt.Println("File is being Read \n", string(readBytes))
 
 }
