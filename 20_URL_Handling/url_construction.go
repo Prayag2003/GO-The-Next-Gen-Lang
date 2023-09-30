@@ -11,7 +11,16 @@ func main() {
 	fmt.Println("Construction of URL !")
 
 	// Type of the URL
-	fmt.Printf("Type od URL is %T", myURL)
+	fmt.Printf("Type of URL is %T\n", myURL)
+	result, err := url.Parse(myURL)
+	if err != nil {
+		panic(err)
+	}
+
+	fmt.Println(result.Scheme)
+	fmt.Println(result.Host)
+	fmt.Println(result.Path)
+	fmt.Println(result.RawQuery)
 
 	// Since the URL is nothing but Key-Value Pairs , we can construct one via
 

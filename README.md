@@ -1,5 +1,5 @@
 <center><h1>Golang</h1></center>
-<center><img src="go.jpg" style="height:210px;width:300px"></center>
+<center><img src="./extra/go.jpg" style="height:210px;width:300px"></center>
 <h2><b>01-Basics</b></h2>
 
 - <b>Go</b> is a compiled language and has different executables for different Operating Systems.

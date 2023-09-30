@@ -6,7 +6,7 @@ import (
 	"net/http"
 )
 
-const url = "https://lco.dev/"
+const url = "https://google.com/"
 
 func main() {
 
@@ -17,7 +17,7 @@ func main() {
 	/*  Client (Browsers like Brave , Chrome ) sends HTTP request to the website
 	( Server ) , Server recieves the request and processes it out in the application layer
 
-	Server sends back HTTP Responsae in Form of objects ...
+	Server sends back HTTP Response in Form of objects ...
 	*/
 
 	/* Neither ReadResponse nor the Response.Write ever closes a connection
