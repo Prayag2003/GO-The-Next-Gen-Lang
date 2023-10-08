@@ -39,7 +39,7 @@ func main() {
 
 	// No Var Style
 	// Using Walrus Operator  ( Var Declaration + Assignment )
-	// this operator can be used only inside the Main Function
+	// this operator can be used only inside a Function
 	noVarStyleVariable := 100
 	fmt.Println(noVarStyleVariable)
 

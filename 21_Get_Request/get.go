@@ -2,7 +2,7 @@ package main
 
 import (
 	"fmt"
-	"io/ioutil"
+	"io"
 	"net/http"
 	"strings"
 )
@@ -29,7 +29,7 @@ func PerformGetRequest(myURL *string) {
 	fmt.Println("Content Length is ", response.ContentLength)
 
 	// reading all the content from the body of the Response
-	content, err := ioutil.ReadAll(response.Body)
+	content, err := io.ReadAll(response.Body)
 
 	if err != nil {
 		panic(err)
@@ -41,7 +41,7 @@ func PerformGetRequest(myURL *string) {
 
 	// https://pkg.go.dev/strings#Builder
 
-	var responseString strings.Builder  
+	var responseString strings.Builder
 	bytecount, _ := responseString.Write(content)
 	fmt.Println("No of Bytes in the String is ", bytecount)
 

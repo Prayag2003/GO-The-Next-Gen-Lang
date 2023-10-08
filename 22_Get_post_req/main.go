@@ -4,6 +4,7 @@ import (
 	"fmt"
 	"io"
 	"net/http"
+	"net/url"
 	"strings"
 )
 
@@ -11,9 +12,11 @@ func main() {
 	const port = 3000
 	performGetRequest(port)
 	performPostRequest(port)
+	performPostFormRequest(port)
 }
 
 func performGetRequest(port int) {
+	fmt.Println("\n\nYou are inside get Request")
 	url := fmt.Sprintf("http://localhost:%d/get", port)
 
 	response, err := http.Get(url)
@@ -38,6 +41,7 @@ func performGetRequest(port int) {
 }
 
 func performPostRequest(port int) {
+	fmt.Println("\n\nYou are inside Post Request")
 	url := fmt.Sprintf("http://localhost:%d/post", port)
 
 	// TODO: fake json payload
@@ -58,4 +62,27 @@ func performPostRequest(port int) {
 	content, _ := io.ReadAll(response.Body)
 
 	fmt.Println(string(content))
+}
+
+func performPostFormRequest(port int) {
+	fmt.Println("\n\nYou are inside Post Form Request")
+	myurl := fmt.Sprintf("http://localhost:%d/postform", port)
+
+	// creating fake formdata
+	data := url.Values{}
+
+	data.Add("age", "20")
+	data.Add("firstname", "Prayag")
+	data.Add("lastname", "Bhatt")
+
+	response, err := http.PostForm(myurl, data)
+	if err != nil {
+		panic(err)
+	}
+
+	defer response.Body.Close()
+
+	respBody, _ := io.ReadAll(response.Body)
+	fmt.Println(string(respBody))
+
 }

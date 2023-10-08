@@ -10,9 +10,8 @@ app.get('/', (req, res) => {
 })
 
 app.get('/get', (req, res) => {
-    res.status(200).json({ message: "Hello from Prayag Bhatt " })
+    res.status(200).json({ message: "Hello from Prayag Bhatt"})
 })
-
 
 app.post('/post', (req, res) => {
     let myJson = req.body;
@@ -26,5 +25,5 @@ app.post('/postform', (req, res) => {
 
 
 app.listen(port, () => {
-    console.log(`Example app listening at http://localhost:${port}`)
+    console.log(`App is listening at http://localhost:${port}`)
 }) 
