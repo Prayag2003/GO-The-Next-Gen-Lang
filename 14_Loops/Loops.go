@@ -10,7 +10,6 @@ func main() {
 		fmt.Println(days[i])
 	}
 	fmt.Println("")
-
 	// i returns the index not the value
 	for i := range days {
 		fmt.Println(days[i])
