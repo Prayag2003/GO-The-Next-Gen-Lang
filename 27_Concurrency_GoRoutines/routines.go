@@ -29,7 +29,6 @@ func main() {
 	for len(myChan) < 2 {
 	}
 
-	
 	fmt.Println(time.Since(start))
 	close(myChan)
 }

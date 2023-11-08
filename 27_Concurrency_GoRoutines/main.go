@@ -6,14 +6,13 @@ import (
 )
 
 func main() {
-	go HelloWorld("Hello")
-	HelloWorld("World")
+	go Greetings("Inside GREETING Routine 🤩")
+	fmt.Println("\nInside MAIN function 😎")
+	time.Sleep(time.Second)
 }
 
-func HelloWorld(s string) {
-	for i := 0; i < 3; i++ {
-		time.Sleep(2 * time.Second)
-		fmt.Println("Prayag says : ", s)
-	}
-	fmt.Println("What")
+func Greetings(s string) {
+	fmt.Println("PRAYAG says : ", s)
+	fmt.Println("")
+	fmt.Println("ByeBye!! Keep learning.")
 }
